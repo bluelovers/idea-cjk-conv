@@ -85,3 +85,7 @@ gen### temp template
 *.js
 *.d.ts
 !/.gitignore
+!/.idea/runConfigurations/
+!/.idea/runConfigurations/*
+!/.idea/idea-cjk-conv.iml
+!/.idea/modules.xml

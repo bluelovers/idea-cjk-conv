@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="sort-package-json " type="NodeJSConfigurationType" factoryName="Node.js" application-parameters="sort-package-json" path-to-js-file="C:/Program Files/nodejs/node_modules/npm/bin/npx-cli.js" working-dir="$PROJECT_DIR$">
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
+      <profiling log-folder="../../../../../PortableApps/PortableApps/IDEAPortable/." />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
