@@ -1,7 +1,7 @@
 # idea-cjk-conv README
 
-idea-cjk-conv 漢字字體轉換
-convert chinese form
+idea-cjk-conv 中文漢字 轉換 `新字体`／`繁體`／`简体`  
+convert `chinese`／`hanzi` between `Shinjitai`／`Traditional`／`Simplified`
 
 ## install
 
@@ -16,7 +16,7 @@ https://github.com/bluelovers/idea-cjk-conv
 
 ## Roadmap
 
-以下功能 礙於 本人實際上不懂 kotlin/java 所以距離實現可能遙遙無期
+以下功能 礙於 本人惰性與實際上不懂 kotlin / java 所以距離實現可能遙遙無期
 
 * 支援日文漢字互轉 ([新字体](https://en.wikipedia.org/wiki/Shinjitai))
 * 支援搜尋輸入框

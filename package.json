@@ -1,9 +1,9 @@
 {
   "name": "idea-cjk-conv",
-  "version": "2018.8.10.0",
+  "version": "2018.8.11.0",
   "private": true,
-  "description": "",
-  "homepage": "https://github.com/bluelovers/idea-cjk-conv#readme",
+  "description": "idea-cjk-conv 中文漢字 轉換 `新字体`／`繁體`／`简体`\nconvert `chinese`／`hanzi` between `Shinjitai`／`Traditional`／`Simplified`",
+  "homepage": "https://github.com/bluelovers/idea-cjk-conv",
   "bugs": {
     "url": "https://github.com/bluelovers/idea-cjk-conv/issues"
   },
@@ -24,7 +24,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "version": "ts-node ./bin/update-version.ts",
+    "version": "ts-node ./bin/update-version.ts && npm run update-info",
     "pre-build": "npm run copy-table && npm run update-info",
     "pack": "npm run pre-build && npm run pack-jar",
     "pack-jar": "ts-node ./bin/pack-jar.ts",

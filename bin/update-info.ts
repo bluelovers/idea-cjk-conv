@@ -4,7 +4,7 @@
 
 import cheerio = require('cheerio');
 import { PKG, PKG_NAME, PKG_NAME_ID } from '../lib/util';
-import { PROJECT_META_INF_INFO, PROJECT_IDEA, PROJECT_ROOT } from '../project.config';
+import { PROJECT_META_INF_INFO, PROJECT_IDEA, PROJECT_ROOT, PROJECT_PRODUCTION } from '../project.config';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import Promise = require('bluebird');
@@ -53,7 +53,12 @@ Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 	{
 		//console.log($.xml());
 
-		return fs.outputFile(PROJECT_META_INF_INFO, $.xml())
+		let xml = $.xml();
+
+		return Promise.all([
+			fs.outputFile(PROJECT_META_INF_INFO, xml),
+			fs.outputFile(path.join(PROJECT_PRODUCTION, `${PKG.name}/META-INF/plugin.xml`), xml),
+		])
 	})
 ;
 

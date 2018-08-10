@@ -1,11 +1,11 @@
-<idea-plugin url="https://github.com/bluelovers/idea-cjk-conv#readme">
+<idea-plugin url="https://github.com/bluelovers/idea-cjk-conv">
   <id>sc.plugin.cjkconv</id>
   <name>cjk-conv</name>
-  <version>2018.8.10.0</version>
-  <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv#readme">bluelovers</vendor>
+  <version>2018.8.11.0</version>
+  <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv">bluelovers</vendor>
 
   <description><![CDATA[<h1>idea-cjk-conv README</h1>
-<p>idea-cjk-conv 漢字字體轉換<br>convert chinese form</p>
+<p>idea-cjk-conv 中文漢字 轉換 <code>新字体</code>／<code>繁體</code>／<code>简体</code><br>convert <code>chinese</code>／<code>hanzi</code> between <code>Shinjitai</code>／<code>Traditional</code>／<code>Simplified</code></p>
 <h2>install</h2>
 <p><a href="https://github.com/bluelovers/idea-cjk-conv">https://github.com/bluelovers/idea-cjk-conv</a></p>
 <ul>
@@ -17,7 +17,7 @@
 <li>簡繁互轉 (分為 安全模式 與 危險模式)</li>
 </ul>
 <h2>Roadmap</h2>
-<p>以下功能 礙於 本人實際上不懂 kotlin/java 所以距離實現可能遙遙無期</p>
+<p>以下功能 礙於 本人惰性與實際上不懂 kotlin / java 所以距離實現可能遙遙無期</p>
 <ul>
 <li>支援日文漢字互轉 (<a href="https://en.wikipedia.org/wiki/Shinjitai">新字体</a>)</li>
 <li>支援搜尋輸入框</li>
@@ -68,11 +68,18 @@
       <action id="$sc.plugin.cjkconv.t2s" class="sc.plugin.cjkconv.action.T2SSafeAction" text="CHT To CHS" description="Call CHT To CHS">
       </action>
 
+      <separator/>
+
       <action id="$sc.plugin.cjkconv.s2t_unsafe" class="sc.plugin.cjkconv.action.S2TUnSafeAction" text="CHS To CHT (UnSafe)" description="Call CHS To CHT (UnSafe)">
       </action>
 
       <action id="$sc.plugin.cjkconv.t2s_unsafe" class="sc.plugin.cjkconv.action.T2SUnSafeAction" text="CHT To CHS (UnSafe)" description="Call CHT To CHS (UnSafe)">
       </action>
+
+      <separator/>
+
+      <action id="$sc.plugin.cjkconv.h2f" class="sc.plugin.cjkconv.action.H2FAction" text="Half-width to Full-width" description="Call Half-width to Full-width"/>
+      <action id="$sc.plugin.cjkconv.f2h" class="sc.plugin.cjkconv.action.F2HAction" text="Full-width to Half-width" description="Call Full-width to Half-width"/>
 
     </group>
 

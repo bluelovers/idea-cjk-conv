@@ -7,7 +7,7 @@
     <option name="SCRIPT_NAME" value="$env.JDK_HOME$/bin/jar.exe" />
     <option name="PARAMETERS" value="cvf ./releases/idea-cjk-conv.jar -C ./out/production/idea-cjk-conv ." />
     <method v="2">
-      <option name="RunConfigurationTask" enabled="$NODE_DEBUG$" run_configuration_name="build" run_configuration_type="js.build_tools.npm" />
+      <option name="RunConfigurationTask" enabled="$NODE_DEBUG$" />
       <option name="MakeProject" enabled="$NODE_DEBUG$" />
     </method>
   </configuration>

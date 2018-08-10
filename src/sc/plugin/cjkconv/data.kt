@@ -31,7 +31,7 @@ class TableLoader(val idkey: String, val pid : String, var loaded: Boolean = fal
 
 			loaded = true
 
-			LOG.info("[load] ${idkey} ${pid}")
+			LOG.debug("[load] ${idkey} ${pid}")
 		}
 
 		return this

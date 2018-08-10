@@ -89,3 +89,6 @@ gen### temp template
 !/.idea/modules.xml
 !/.gitmodules
 /out/
+!/.idea/dictionaries/*
+!/.idea/dictionaries/
+!/.idea/
