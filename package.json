@@ -13,6 +13,9 @@
   },
   "license": "MIT",
   "author": "bluelovers",
+  "ideaPlugin": {
+    "title": "cjk-conv"
+  },
   "main": "index.js",
   "bin": {
     "idea-cjk-conv": "copy-table.js"
@@ -23,6 +26,7 @@
   "scripts": {
     "version": "ts-node ./bin/update-version.ts",
     "copy-table": "ts-node ./bin/copy-table.ts",
+    "update-info": "ts-node ./bin/update-info.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

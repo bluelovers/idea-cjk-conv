@@ -1,19 +1,44 @@
-<idea-plugin>
-  <id>sc.plugin.cjkConv</id>
-  <name>cjkConv</name>
+<idea-plugin url="https://github.com/bluelovers/idea-cjk-conv#readme">
+  <id>sc.plugin.cjkconv</id>
+  <name>cjk-conv</name>
   <version>1.0.0</version>
-  <vendor email="support@yourcompany.com" url="https://github.com/bluelovers/idea-cjk-conv#readme">bluelovers</vendor>
+  <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv#readme">bluelovers</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+<h1><a href="#idea-cjk-conv-readme" id="idea-cjk-conv-readme">idea-cjk-conv README</a></h1>
+<p>idea-cjk-conv 漢字字體轉換
+convert chinese form</p>
+<h2><a href="#install" id="install">install</a></h2>
+<ul>
+  <li><a href="https://github.com/bluelovers/idea-cjk-conv/releases/idea-cjk-conv.jar" class="absent">github</a></li>
+</ul>
+<h2><a href="#feature" id="feature">Feature</a></h2>
+<ul>
+  <li>簡繁互轉 (分為 安全模式 與 危險模式)</li>
+</ul>
+<h2><a href="#roadmap" id="roadmap">Roadmap</a></h2>
+<p>以下功能 礙於 本人實際上不懂 kotlin/java 所以距離實現可能遙遙無期</p>
+<ul>
+  <li>支援日文漢字互轉 (<a href="https://en.wikipedia.org/wiki/Shinjitai">新字体</a>)</li>
+  <li>支援搜尋輸入框</li>
+  <li>將 <a href="https://github.com/bluelovers/cjk-convert">cjk-conv</a> 的功能移植進來</li>
+  <li>將 <a href="https://github.com/bluelovers/regexp-cjk">regexp-cjk</a> 的功能移植進來</li>
+  <li>支援 全形/半形 轉換</li>
+</ul>
+<h2><a href="#link" id="link">Link</a></h2>
+<ul>
+  <li><a href="https://github.com/bluelovers/cjk-convert">cjk-conv</a></li>
+  <li><a href="https://github.com/YiiGuxing/TranslationPlugin">https://github.com/YiiGuxing/TranslationPlugin</a></li>
+  <li><a href="https://github.com/krasa/StringManipulation">https://github.com/krasa/StringManipulation</a></li>
+  <li></li>
+</ul>
     ]]></description>
 
-  <change-notes><![CDATA[
+  <!--change-notes><![CDATA[
       Add change notes here.<br>
       <em>most HTML tags may be used</em>
     ]]>
-  </change-notes>
+  </change-notes-->
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
@@ -30,6 +55,38 @@
 
   <actions>
     <!-- Add your actions here -->
+
+    <group id="$sc.plugin.cjkconv.MenuGroup" text="Cjk Conv" description="Group of cjk-conv" popup="true" icon="AllIcons.Actions.Edit">
+      <add-to-group group-id="EditMenu" anchor="last"/>
+
+      <action id="$sc.plugin.cjkconv.s2t" class="sc.plugin.cjkconv.action.S2TSafeAction" text="CHS To CHT" description="Call CHS To CHT">
+      </action>
+
+      <action id="$sc.plugin.cjkconv.t2s" class="sc.plugin.cjkconv.action.T2SSafeAction" text="CHT To CHS" description="Call CHT To CHS">
+      </action>
+
+      <action id="$sc.plugin.cjkconv.s2t_unsafe" class="sc.plugin.cjkconv.action.S2TUnSafeAction" text="CHS To CHT (UnSafe)" description="Call CHS To CHT (UnSafe)">
+      </action>
+
+      <action id="$sc.plugin.cjkconv.t2s_unsafe" class="sc.plugin.cjkconv.action.T2SUnSafeAction" text="CHT To CHS (UnSafe)" description="Call CHT To CHS (UnSafe)">
+      </action>
+
+    </group>
+
+    <!--
+    @todo 加入支援 搜尋/取代 的輸入框右鍵選單
+    -->
+    <group id="$sc.plugin.cjkconv.PopupMenu" text="Translation Popup Menu Actions">
+            <separator/>
+            <reference ref="$sc.plugin.cjkconv.MenuGroup"/>
+            <separator/>
+
+            <add-to-group group-id="BasicEditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="EditorToggleColumnMode"/>
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="Diff.EditorPopupMenu" anchor="last"/>
+    </group>
+
   </actions>
 
 </idea-plugin>

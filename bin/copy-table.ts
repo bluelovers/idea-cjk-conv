@@ -4,15 +4,14 @@
 
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { PKG_NAME } from '../lib/util';
+import { PKG_NAME, PKG_NAME_ID } from '../lib/util';
 import { PROJECT_RESOURCES } from '../project.config';
 import fg = require('fast-glob');
 import Promise = require('bluebird');
 
 const MOD = 'cjk-conv';
-const MOD_NAME = PKG_NAME;
 
-const RESOURCES_PATH = path.join(PROJECT_RESOURCES, 'sc', 'plugin', MOD_NAME, 'data');
+const RESOURCES_PATH = path.join(PROJECT_RESOURCES, 'sc', 'plugin', PKG_NAME_ID, 'data');
 
 const options = {
 	cwd: path.posix.join(path.dirname(require.resolve(MOD)), 'build/zh/convert'),
@@ -25,6 +24,7 @@ Promise
 	.tap(function ()
 	{
 		console.log('start copy all table');
+		console.log(path.relative(__dirname, RESOURCES_PATH));
 	})
 	.each(function (filename: string)
 	{

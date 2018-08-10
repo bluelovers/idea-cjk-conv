@@ -3,7 +3,7 @@
  */
 
 import cheerio = require('cheerio');
-import { PKG, PKG_NAME } from '../lib/util';
+import { PKG, PKG_NAME, PKG_NAME_ID } from '../lib/util';
 import { PROJECT_META_INF_INFO, PROJECT_IDEA } from '../project.config';
 import * as fs from 'fs-extra';
 import * as path from 'path';
@@ -19,12 +19,14 @@ Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 	})
 	.tap(function ($)
 	{
-		$('idea-plugin > id').text(PROJECT_IDEA + '.' + PKG_NAME);
-		$('idea-plugin > name').text(PKG_NAME);
+		$('idea-plugin').attr('url', PKG.homepage);
+
+		$('idea-plugin > id').text(PROJECT_IDEA + '.' + PKG_NAME_ID);
+		// @ts-ignore
+		$('idea-plugin > name').text(PKG.ideaPlugin.title || PKG.title || PKG_NAME);
 		$('idea-plugin > version').text(PKG.version);
 		let vendor = $('idea-plugin > vendor');
 
-		// @ts-ignore
 		vendor.attr('url', PKG.homepage);
 
 		vendor.text(PKG.author);

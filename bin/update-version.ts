@@ -6,6 +6,7 @@ import * as fs from 'fs-extra';
 
 import moment = require('moment');
 import * as path from 'path';
+import { initPKG, IPkg } from '../lib/util';
 
 let data = moment();
 let key = data.format('Y.M.D');
@@ -13,7 +14,11 @@ let key = data.format('Y.M.D');
 let file = path.join(__dirname, '../package.json');
 
 fs.readJSON(file)
-	.then(function (PKG: typeof import("../package.json"))
+	.then(function (PKG: typeof import('../package.json'))
+	{
+		return initPKG(PKG)
+	})
+	.then(function (PKG)
 	{
 		let n: string | number = PKG.version.replace(key + '.', '');
 

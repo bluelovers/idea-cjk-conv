@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="jar" type="BatchConfigurationType" factoryName="Batch">
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <option name="PARENT_ENVS" value="$NODE_DEBUG$" />
+    <module name="" />
+    <option name="SCRIPT_NAME" value="$env.JDK_HOME$/bin/jar.exe" />
+    <option name="PARAMETERS" value="cvf ./releases/idea-cjk-conv.jar -C ./out/production/idea-cjk-conv ." />
+    <method v="2">
+      <option name="MakeProject" enabled="$NODE_DEBUG$" />
+    </method>
+  </configuration>
+</component>

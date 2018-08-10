@@ -1,13 +1,42 @@
-package sc.plugin.cjkConv
+package sc.plugin.cjkconv
 
+/**
+ * 一堆雜七雜八 等待分離優化的東西
+ */
+import com.intellij.openapi.editor.Editor
+import com.intellij.openapi.editor.SelectionModel
+import sc.sdk.ApiLog
 import sc.sdk.ReadFile_Files_ReadAllBytes
 
-val PATH_TABLE = "/sc/plugin/cjkConv/data"
+val PATH_TABLE = "/sc/plugin/cjkconv/data"
 
-class TableLoader(val idkey: String, val pid : String)
+class TableLoader(val idkey: String, val pid : String, var loaded: Boolean = false)
 {
-	val from = ReadFile_Files_ReadAllBytes("${PATH_TABLE}/${pid}/${idkey}.from.txt")
-	val to = ReadFile_Files_ReadAllBytes("${PATH_TABLE}/${pid}/${idkey}.to.txt")
+	val LOG = ApiLog(javaClass)
+
+	var from: ByteArray? = null
+	var to: ByteArray? = null
+
+	fun load(): TableLoader
+	{
+		if (!loaded)
+		{
+			val f1 = TableLoader::class.java
+				.getResource("${PATH_TABLE}/${pid}/${idkey}.from.txt")
+			val f2 = TableLoader::class.java
+				.getResource("${PATH_TABLE}/${pid}/${idkey}.to.txt")
+
+			from = ReadFile_Files_ReadAllBytes(f1.toURI().path)
+			to = ReadFile_Files_ReadAllBytes(f2.toURI().path)
+
+			loaded = true
+
+			LOG.info("[load] ${idkey} ${pid}")
+		}
+
+		return this
+	}
+
 }
 
 class MyStringTable(val string_from: String, val string_to: String)
@@ -133,4 +162,61 @@ fun toUnicodeCharArray(s: String): IntArray
 	}
 
 	return ca;
+}
+
+fun translate(text: String, dictionary: Map<Int, Int>): String
+{
+	val len = text.length
+
+	var i = 0
+	var ci = 0
+
+	val list: MutableList<Char> = ArrayList<Char>()
+
+	while (i < len)
+	{
+		val p = text.codePointAt(i)
+
+		val found = dictionary.get(p)
+
+		var rs: CharArray
+
+		if (null != found)
+		{
+			rs = Character.toChars(found)
+		}
+		else
+		{
+			rs = Character.toChars(p)
+		}
+
+		rs.forEach { c: Char ->
+
+			list.add(c)
+
+		}
+
+		//list.addAll(rs.toCollection())
+
+		//list.add(rs)
+
+		//list.addAll(ci, rs)
+
+		ci++
+
+		i += Character.charCount(p)
+	}
+
+	return list.joinToString(separator = "")
+}
+
+fun replaceSelectionText(editor: Editor, model: SelectionModel, text: String)
+{
+	val start = model.getSelectionStart()
+	val end = model.getSelectionEnd()
+
+	editor
+		.document
+		.replaceString(start, end, text)
+	;
 }

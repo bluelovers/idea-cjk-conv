@@ -10,8 +10,7 @@ const project_config_1 = require("../project.config");
 const fg = require("fast-glob");
 const Promise = require("bluebird");
 const MOD = 'cjk-conv';
-const MOD_NAME = util_1.PKG_NAME;
-const RESOURCES_PATH = path.join(project_config_1.PROJECT_RESOURCES, 'sc', 'plugin', MOD_NAME, 'data');
+const RESOURCES_PATH = path.join(project_config_1.PROJECT_RESOURCES, 'sc', 'plugin', util_1.PKG_NAME_ID, 'data');
 const options = {
     cwd: path.posix.join(path.dirname(require.resolve(MOD)), 'build/zh/convert'),
 };
@@ -21,6 +20,7 @@ Promise
 ], options))
     .tap(function () {
     console.log('start copy all table');
+    console.log(path.relative(__dirname, RESOURCES_PATH));
 })
     .each(function (filename) {
     return copy(filename)
