@@ -89,3 +89,4 @@ gen### temp template
 !/.idea/runConfigurations/*
 !/.idea/idea-cjk-conv.iml
 !/.idea/modules.xml
+!/.gitmodules
