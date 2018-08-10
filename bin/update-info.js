@@ -19,6 +19,10 @@ Promise.resolve(fs.readFile(project_config_1.PROJECT_META_INF_INFO))
     $('idea-plugin > id').text(project_config_1.PROJECT_IDEA + '.' + util_1.PKG_NAME);
     $('idea-plugin > name').text(util_1.PKG_NAME);
     $('idea-plugin > version').text(util_1.PKG.version);
+    let vendor = $('idea-plugin > vendor');
+    // @ts-ignore
+    vendor.attr('url', util_1.PKG.homepage);
+    vendor.text(util_1.PKG.author);
 })
     .tap(function ($) {
     console.log($.xml());

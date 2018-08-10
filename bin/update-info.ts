@@ -22,6 +22,12 @@ Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 		$('idea-plugin > id').text(PROJECT_IDEA + '.' + PKG_NAME);
 		$('idea-plugin > name').text(PKG_NAME);
 		$('idea-plugin > version').text(PKG.version);
+		let vendor = $('idea-plugin > vendor');
+
+		// @ts-ignore
+		vendor.attr('url', PKG.homepage);
+
+		vendor.text(PKG.author);
 	})
 	.tap(function ($)
 	{
