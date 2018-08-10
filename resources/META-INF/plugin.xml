@@ -1,7 +1,7 @@
 <idea-plugin url="https://github.com/bluelovers/idea-cjk-conv#readme">
   <id>sc.plugin.cjkconv</id>
   <name>cjk-conv</name>
-  <version>1.0.0</version>
+  <version>2018.8.10.0</version>
   <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv#readme">bluelovers</vendor>
 
   <description><![CDATA[
@@ -11,6 +11,7 @@ convert chinese form</p>
 <h2><a href="#install" id="install">install</a></h2>
 <ul>
   <li><a href="https://github.com/bluelovers/idea-cjk-conv/releases/idea-cjk-conv.jar" class="absent">github</a></li>
+  <li><a href="https://plugins.jetbrains.com/plugin/11012-cjk-conv">jetbrains</a></li>
 </ul>
 <h2><a href="#feature" id="feature">Feature</a></h2>
 <ul>
@@ -28,8 +29,10 @@ convert chinese form</p>
 <h2><a href="#link" id="link">Link</a></h2>
 <ul>
   <li><a href="https://github.com/bluelovers/cjk-convert">cjk-conv</a></li>
+  <li><a href="https://github.com/bluelovers/regexp-cjk">regexp-cjk</a></li>
   <li><a href="https://github.com/YiiGuxing/TranslationPlugin">https://github.com/YiiGuxing/TranslationPlugin</a></li>
   <li><a href="https://github.com/krasa/StringManipulation">https://github.com/krasa/StringManipulation</a></li>
+  <li><a href="https://github.com/bluelovers/idea-run-typescript">Run Configuration for TypeScript</a></li>
   <li></li>
 </ul>
     ]]></description>
@@ -48,6 +51,7 @@ convert chinese form</p>
   <!-- uncomment to enable plugin in all products
   <depends>com.intellij.modules.lang</depends>
   -->
+  <depends>com.intellij.modules.lang</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->

@@ -28,4 +28,5 @@ convert chinese form
 * [regexp-cjk](https://github.com/bluelovers/regexp-cjk)
 * https://github.com/YiiGuxing/TranslationPlugin
 * https://github.com/krasa/StringManipulation
+* [Run Configuration for TypeScript](https://github.com/bluelovers/idea-run-typescript)
 * 
