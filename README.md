@@ -5,7 +5,9 @@ convert chinese form
 
 ## install
 
-* [github](https://github.com/bluelovers/idea-cjk-conv/releases/idea-cjk-conv.jar)
+https://github.com/bluelovers/idea-cjk-conv
+
+* [github](https://github.com/bluelovers/idea-cjk-conv/blob/master/releases/idea-cjk-conv.jar)
 * [jetbrains](https://plugins.jetbrains.com/plugin/11012-cjk-conv)
 
 ## Feature

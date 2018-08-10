@@ -1,6 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### npm2 template
-.idea
+.idea/*
 
 ~ci.list.txt
 ~ci.log.txt
@@ -64,9 +64,7 @@ tests/temp*### Example user template template
 ### Example user template
 
 # IntelliJ project files
-.idea
 *.iml
-out
 gen### temp template
 /~*
 ~ci.list.txt
@@ -90,3 +88,4 @@ gen### temp template
 !/.idea/idea-cjk-conv.iml
 !/.idea/modules.xml
 !/.gitmodules
+/out/

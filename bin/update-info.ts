@@ -4,20 +4,23 @@
 
 import cheerio = require('cheerio');
 import { PKG, PKG_NAME, PKG_NAME_ID } from '../lib/util';
-import { PROJECT_META_INF_INFO, PROJECT_IDEA } from '../project.config';
+import { PROJECT_META_INF_INFO, PROJECT_IDEA, PROJECT_ROOT } from '../project.config';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import Promise = require('bluebird');
+import Marked = require('marked');
 
 Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 	.then(function (text)
 	{
+		// @ts-ignore
 		return cheerio.load(text.toString(), {
 			normalizeWhitespace: false,
 			xmlMode: true,
+			xml: true,
 		});
 	})
-	.tap(function ($)
+	.tap(async function ($)
 	{
 		$('idea-plugin').attr('url', PKG.homepage);
 
@@ -30,11 +33,32 @@ Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 		vendor.attr('url', PKG.homepage);
 
 		vendor.text(PKG.author);
+
+		{
+			let readme = await fs.readFile(path.join(PROJECT_ROOT, 'README.md'));
+
+			let md = Marked(readme.toString(), {
+				breaks: true,
+				headerIds: false,
+				gfm: true,
+			});
+
+			let elem = $('idea-plugin > description');
+
+			updateCDATA(elem, md);
+			//elem[0].children[0].children[0].data = md;
+		}
 	})
 	.tap(function ($)
 	{
-		console.log($.xml());
+		//console.log($.xml());
 
 		return fs.outputFile(PROJECT_META_INF_INFO, $.xml())
 	})
 ;
+
+function updateCDATA(elem: Cheerio, value: string)
+{
+	return elem[0].children[0].children[0].data = value;
+}
+

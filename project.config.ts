@@ -9,6 +9,8 @@ export const PROJECT_IDEA = 'sc.plugin';
 export const PROJECT_ROOT = path.join(__dirname);
 
 export const PROJECT_RESOURCES = path.join(PROJECT_ROOT, 'resources');
+export const PROJECT_RELEASES = path.join(PROJECT_ROOT, 'releases');
+export const PROJECT_PRODUCTION = path.join(PROJECT_ROOT, 'out/production');
 
 export const PROJECT_META_INF_INFO = path.join(PROJECT_RESOURCES, 'META-INF/plugin.xml');
 

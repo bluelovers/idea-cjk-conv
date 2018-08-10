@@ -25,6 +25,9 @@
   },
   "scripts": {
     "version": "ts-node ./bin/update-version.ts",
+    "pre-build": "npm run copy-table && npm run update-info",
+    "pack": "npm run pre-build && npm run pack-jar",
+    "pack-jar": "ts-node ./bin/pack-jar.ts",
     "copy-table": "ts-node ./bin/copy-table.ts",
     "update-info": "ts-node ./bin/update-info.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,13 +35,17 @@
   "dependencies": {
     "@types/bluebird": "^3.5.23",
     "@types/cheerio": "^0.22.8",
+    "@types/cross-spawn": "^6.0.0",
     "@types/fs-extra": "^5.0.4",
+    "@types/marked": "^0.4.0",
     "@types/node": "^10.5.7",
     "bluebird": "^3.5.1",
     "cheerio": "^1.0.0-rc.2",
     "cjk-conv": "^1.0.77",
+    "cross-spawn": "^6.0.5",
     "fast-glob": "^2.2.2",
     "fs-extra": "^7.0.0",
+    "marked": "^0.4.0",
     "moment": "^2.22.2"
   },
   "devDependencies": {}

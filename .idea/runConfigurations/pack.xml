@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="pack" type="js.build_tools.npm" factoryName="npm" nameIsGenerated="$NODE_DEBUG$">
+    <package-json value="$PROJECT_DIR$/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="pack" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2">
+      <option name="MakeProject" enabled="$NODE_DEBUG$" />
+    </method>
+  </configuration>
+</component>
