@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "es2017",
+
+    "moduleResolution": "node",
+    "allowJs": false,
+
+    "declaration": true,
+    "experimentalDecorators": true,
+
+    "allowSyntheticDefaultImports": true,
+
+    "strict": false,
+    "resolveJsonModule": true
+  }
+}

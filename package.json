@@ -1,0 +1,28 @@
+{
+  "name": "idea-cjk-conv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "copy-table": "ts-node ./bin/copy-table.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/bluebird": "^3.5.23",
+    "@types/cheerio": "^0.22.8",
+    "@types/fs-extra": "^5.0.4",
+    "@types/node": "^10.5.7",
+    "bluebird": "^3.5.1",
+    "cheerio": "^1.0.0-rc.2",
+    "cjk-conv": "^1.0.77",
+    "fast-glob": "^2.2.2",
+    "fs-extra": "^7.0.0"
+  },
+  "devDependencies": {}
+}
