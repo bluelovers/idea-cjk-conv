@@ -22,9 +22,30 @@ abstract class AbstractConvAction(val idkey: String, val pid: String, icon: Icon
 		{
 			val table = TableLoader(idkey, pid).load()
 
+			val _from: String
+			val _to: String
+
+			if (table.from is String)
+			{
+				_from = table.from!!
+			}
+			else
+			{
+				_from = String(table.from as ByteArray)
+			}
+
+			if (table.to is String)
+			{
+				_to = table.to!!
+			}
+			else
+			{
+				_to = String(table.to as ByteArray)
+			}
+
 			MyStringTable(
-				string_from = String(table.from as ByteArray),
-				string_to = String(table.to as ByteArray)
+				string_from = _from,
+				string_to = _to
 			).copyTo(_hashmap)
 
 			_inited = true

@@ -6,7 +6,9 @@ package sc.plugin.cjkconv
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.editor.SelectionModel
 import sc.sdk.ApiLog
-import sc.sdk.ReadFile_Files_ReadAllBytes
+import sc.sdk.ApiResource
+
+
 
 val PATH_TABLE = "/sc/plugin/cjkconv/data"
 
@@ -14,24 +16,19 @@ class TableLoader(val idkey: String, val pid : String, var loaded: Boolean = fal
 {
 	val LOG = ApiLog(javaClass)
 
-	var from: ByteArray? = null
-	var to: ByteArray? = null
+	var from: String? = null
+	var to: String? = null
 
 	fun load(): TableLoader
 	{
 		if (!loaded)
 		{
-			val f1 = TableLoader::class.java
-				.getResource("${PATH_TABLE}/${pid}/${idkey}.from.txt")
-			val f2 = TableLoader::class.java
-				.getResource("${PATH_TABLE}/${pid}/${idkey}.to.txt")
-
-			from = ReadFile_Files_ReadAllBytes(f1.toURI().path)
-			to = ReadFile_Files_ReadAllBytes(f2.toURI().path)
-
-			loaded = true
+			from = ApiResource().readFile("${PATH_TABLE}/${pid}/${idkey}.from.txt", javaClass)
+			to = ApiResource().readFile("${PATH_TABLE}/${pid}/${idkey}.to.txt", javaClass)
 
 			LOG.debug("[load] ${idkey} ${pid}")
+
+			loaded = true
 		}
 
 		return this
