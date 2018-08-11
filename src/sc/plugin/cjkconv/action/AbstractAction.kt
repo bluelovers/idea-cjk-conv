@@ -90,11 +90,16 @@ abstract class AbstractAction(icon: Icon? = null) : AnAction(icon), DumbAware
 		e.presentation.isEnabledAndVisible = active
 	}
 
-	protected open val AnActionEvent.editor: Editor? get() = CommonDataKeys.EDITOR.getData(dataContext)
+	//protected open val AnActionEvent.editor: Editor? get() = CommonDataKeys.EDITOR.getData(dataContext)
+
+	open fun getEditor(e: AnActionEvent): Editor?
+	{
+		return CommonDataKeys.EDITOR.getData(e.dataContext)
+	}
 
 	override fun update(e: AnActionEvent)
 	{
-		val active = e.editor?.let { editor ->
+		val active = getEditor(e)?.let { editor ->
 			editor.selectionModel.hasSelection()
 		} ?: false
 
@@ -110,7 +115,7 @@ abstract class AbstractAction(icon: Icon? = null) : AnAction(icon), DumbAware
 			return
 		}
 
-		val editor = e.editor ?: return
+		val editor = getEditor(e) ?: return
 		onActionPerformed(e, editor, editor.selectionModel)
 	}
 }

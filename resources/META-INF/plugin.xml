@@ -59,36 +59,36 @@
   <actions>
     <!-- Add your actions here -->
 
-    <group id="$sc.plugin.cjkconv.MenuGroup" text="Cjk Conv" description="Group of cjk-conv" popup="true" icon="AllIcons.Actions.Edit">
+    <group id="#sc.plugin.cjkconv.MenuGroup" text="cjk-conv" description="Group of cjk-conv" popup="true" icon="AllIcons.Actions.Edit">
       <add-to-group group-id="EditMenu" anchor="last"/>
 
-      <action id="$sc.plugin.cjkconv.s2t" class="sc.plugin.cjkconv.action.S2TSafeAction" text="CHS To CHT" description="Call CHS To CHT">
+      <action id="#sc.plugin.cjkconv.s2t" class="sc.plugin.cjkconv.action.S2TSafeAction" text="CHS To CHT" description="Call CHS To CHT">
       </action>
 
-      <action id="$sc.plugin.cjkconv.t2s" class="sc.plugin.cjkconv.action.T2SSafeAction" text="CHT To CHS" description="Call CHT To CHS">
-      </action>
-
-      <separator/>
-
-      <action id="$sc.plugin.cjkconv.s2t_unsafe" class="sc.plugin.cjkconv.action.S2TUnSafeAction" text="CHS To CHT (UnSafe)" description="Call CHS To CHT (UnSafe)">
-      </action>
-
-      <action id="$sc.plugin.cjkconv.t2s_unsafe" class="sc.plugin.cjkconv.action.T2SUnSafeAction" text="CHT To CHS (UnSafe)" description="Call CHT To CHS (UnSafe)">
+      <action id="#sc.plugin.cjkconv.t2s" class="sc.plugin.cjkconv.action.T2SSafeAction" text="CHT To CHS" description="Call CHT To CHS">
       </action>
 
       <separator/>
 
-      <action id="$sc.plugin.cjkconv.h2f" class="sc.plugin.cjkconv.action.H2FAction" text="Half-width to Full-width" description="Call Half-width to Full-width"/>
-      <action id="$sc.plugin.cjkconv.f2h" class="sc.plugin.cjkconv.action.F2HAction" text="Full-width to Half-width" description="Call Full-width to Half-width"/>
+      <action id="#sc.plugin.cjkconv.s2t_unsafe" class="sc.plugin.cjkconv.action.S2TUnSafeAction" text="CHS To CHT (UnSafe)" description="Call CHS To CHT (UnSafe)">
+      </action>
+
+      <action id="#sc.plugin.cjkconv.t2s_unsafe" class="sc.plugin.cjkconv.action.T2SUnSafeAction" text="CHT To CHS (UnSafe)" description="Call CHT To CHS (UnSafe)">
+      </action>
+
+      <separator/>
+
+      <action id="#sc.plugin.cjkconv.h2f" class="sc.plugin.cjkconv.action.H2FAction" text="Half-width to Full-width" description="Call Half-width to Full-width"/>
+      <action id="#sc.plugin.cjkconv.f2h" class="sc.plugin.cjkconv.action.F2HAction" text="Full-width to Half-width" description="Call Full-width to Half-width"/>
 
     </group>
 
     <!--
     @todo 加入支援 搜尋/取代 的輸入框右鍵選單
     -->
-    <group id="$sc.plugin.cjkconv.PopupMenu" text="Translation Popup Menu Actions">
+    <group id="#sc.plugin.cjkconv.PopupMenu" text="cjk-conv Popup Menu Actions">
             <separator/>
-            <reference ref="$sc.plugin.cjkconv.MenuGroup"/>
+            <reference ref="#sc.plugin.cjkconv.MenuGroup"/>
             <separator/>
 
             <add-to-group group-id="BasicEditorPopupMenu" anchor="last"/>
