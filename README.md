@@ -14,8 +14,8 @@ https://github.com/bluelovers/idea-cjk-conv
 
 > 已實現功能
 
-* 簡繁互轉 (分為 安全模式 與 危險模式)
-* 全形 半形 轉換 (尚未完整支援所有這類字元)
+* 簡繁互轉 (分為 安全模式 與 危險模式) / convert Traditional / Simplified (safe / unsafe mode)
+* 全形 半形 轉換 (尚未完整支援所有這類字元) / convert full-width / half-width (need add more char support)
 
 ## Roadmap
 
@@ -25,7 +25,7 @@ https://github.com/bluelovers/idea-cjk-conv
 * 支援搜尋輸入框
 * 將 [cjk-conv](https://github.com/bluelovers/cjk-convert) 的功能移植進來
 * 將 [regexp-cjk](https://github.com/bluelovers/regexp-cjk) 的功能移植進來
-* 支援 全形/半形 轉換
+* 支援 全形/半形 轉換 (完整字元範圍)
 
 ## Link
 
