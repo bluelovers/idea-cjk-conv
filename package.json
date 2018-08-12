@@ -14,7 +14,13 @@
   "license": "MIT",
   "author": "bluelovers",
   "ideaPlugin": {
-    "title": "cjk-conv"
+    "title": "cjk-conv",
+    "dependencies": [
+      "com.intellij.modules.lang"
+    ],
+    "optionalDependencies": [
+
+    ]
   },
   "main": "index.js",
   "bin": {
