@@ -12,11 +12,14 @@ https://github.com/bluelovers/idea-cjk-conv
 
 ## Feature
 
+> 已實現功能
+
 * 簡繁互轉 (分為 安全模式 與 危險模式)
+* 全形 半形 轉換 (尚未完整支援所有這類字元)
 
 ## Roadmap
 
-以下功能 礙於 本人惰性與實際上不懂 kotlin / java 所以距離實現可能遙遙無期
+> 以下功能 礙於 本人惰性與實際上不懂 kotlin / java 所以距離實現可能遙遙無期
 
 * 支援日文漢字互轉 ([新字体](https://en.wikipedia.org/wiki/Shinjitai))
 * 支援搜尋輸入框
@@ -28,7 +31,11 @@ https://github.com/bluelovers/idea-cjk-conv
 
 * [cjk-conv](https://github.com/bluelovers/cjk-convert)
 * [regexp-cjk](https://github.com/bluelovers/regexp-cjk)
+* [Run Configuration for TypeScript](https://github.com/bluelovers/idea-run-typescript)
+* 
+
+### 插件製作時複製參考來源
+
 * https://github.com/YiiGuxing/TranslationPlugin
 * https://github.com/krasa/StringManipulation
-* [Run Configuration for TypeScript](https://github.com/bluelovers/idea-run-typescript)
 * 

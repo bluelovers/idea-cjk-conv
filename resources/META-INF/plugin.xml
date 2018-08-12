@@ -1,7 +1,7 @@
 <idea-plugin url="https://github.com/bluelovers/idea-cjk-conv">
   <id>sc.plugin.cjkconv</id>
   <name>cjk-conv</name>
-  <version>2018.8.11.1</version>
+  <version>2018.8.12.0</version>
   <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv">bluelovers</vendor>
 
   <description><![CDATA[<h1>idea-cjk-conv README</h1>
@@ -13,11 +13,17 @@
 <li><a href="https://plugins.jetbrains.com/plugin/11012-cjk-conv">jetbrains</a></li>
 </ul>
 <h2>Feature</h2>
+<blockquote>
+<p>已實現功能</p>
+</blockquote>
 <ul>
 <li>簡繁互轉 (分為 安全模式 與 危險模式)</li>
+<li>全形 半形 轉換 (尚未完整支援所有這類字元)</li>
 </ul>
 <h2>Roadmap</h2>
+<blockquote>
 <p>以下功能 礙於 本人惰性與實際上不懂 kotlin / java 所以距離實現可能遙遙無期</p>
+</blockquote>
 <ul>
 <li>支援日文漢字互轉 (<a href="https://en.wikipedia.org/wiki/Shinjitai">新字体</a>)</li>
 <li>支援搜尋輸入框</li>
@@ -29,9 +35,13 @@
 <ul>
 <li><a href="https://github.com/bluelovers/cjk-convert">cjk-conv</a></li>
 <li><a href="https://github.com/bluelovers/regexp-cjk">regexp-cjk</a></li>
+<li><a href="https://github.com/bluelovers/idea-run-typescript">Run Configuration for TypeScript</a></li>
+<li></li>
+</ul>
+<h3>插件製作時複製參考來源</h3>
+<ul>
 <li><a href="https://github.com/YiiGuxing/TranslationPlugin">https://github.com/YiiGuxing/TranslationPlugin</a></li>
 <li><a href="https://github.com/krasa/StringManipulation">https://github.com/krasa/StringManipulation</a></li>
-<li><a href="https://github.com/bluelovers/idea-run-typescript">Run Configuration for TypeScript</a></li>
 <li></li>
 </ul>
 ]]></description>
