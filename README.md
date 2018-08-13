@@ -7,7 +7,7 @@ convert `chinese`／`hanzi` between `Shinjitai`／`Traditional`／`Simplified`
 
 https://github.com/bluelovers/idea-cjk-conv
 
-* [github](https://github.com/bluelovers/idea-cjk-conv/blob/master/releases/idea-cjk-conv.jar)
+* [github](releases/idea-cjk-conv.jar)
 * [jetbrains](https://plugins.jetbrains.com/plugin/11012-cjk-conv)
 
 ## Feature
@@ -39,3 +39,7 @@ https://github.com/bluelovers/idea-cjk-conv
 * https://github.com/YiiGuxing/TranslationPlugin
 * https://github.com/krasa/StringManipulation
 * 
+
+## Screenshot
+
+![screenshot_18367.png](readme/screenshot_18367.png)

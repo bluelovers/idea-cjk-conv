@@ -3,12 +3,16 @@
  */
 
 import cheerio = require('cheerio');
+import * as url from 'url';
 import { PKG, PKG_NAME, PKG_NAME_ID } from '../lib/util';
 import { PROJECT_META_INF_INFO, PROJECT_IDEA, PROJECT_ROOT, PROJECT_PRODUCTION } from '../project.config';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import Promise = require('bluebird');
 import Marked = require('marked');
+
+// @ts-ignore
+const baseUrl = url.resolve((PKG.ideaPlugin.baseUrl || PKG.homepage) + (PKG.homepage.substr(-1) == '/' ? '' : '/'), 'blob/master/');
 
 Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 	.then(function (text)
@@ -18,6 +22,7 @@ Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 			normalizeWhitespace: false,
 			xmlMode: true,
 			xml: true,
+			baseUrl,
 		});
 	})
 	.tap(async function ($)
@@ -41,6 +46,7 @@ Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 				breaks: true,
 				headerIds: false,
 				gfm: true,
+				baseUrl,
 			});
 
 			let elem = $('idea-plugin > description');
