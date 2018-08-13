@@ -1,7 +1,7 @@
 <idea-plugin url="https://github.com/bluelovers/idea-cjk-conv">
   <id>sc.plugin.cjkconv</id>
   <name>cjk-conv</name>
-  <version>2018.8.12.0</version>
+  <version>2018.8.13.0</version>
   <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv">bluelovers</vendor>
 
   <description><![CDATA[<h1>idea-cjk-conv README</h1>
@@ -17,8 +17,8 @@
 <p>已實現功能</p>
 </blockquote>
 <ul>
-<li>簡繁互轉 (分為 安全模式 與 危險模式)</li>
-<li>全形 半形 轉換 (尚未完整支援所有這類字元)</li>
+<li>簡繁互轉 (分為 安全模式 與 危險模式) / convert Traditional / Simplified (safe / unsafe mode)</li>
+<li>全形 半形 轉換 (尚未完整支援所有這類字元) / convert full-width / half-width (need add more char support)</li>
 </ul>
 <h2>Roadmap</h2>
 <blockquote>
@@ -29,7 +29,7 @@
 <li>支援搜尋輸入框</li>
 <li>將 <a href="https://github.com/bluelovers/cjk-convert">cjk-conv</a> 的功能移植進來</li>
 <li>將 <a href="https://github.com/bluelovers/regexp-cjk">regexp-cjk</a> 的功能移植進來</li>
-<li>支援 全形/半形 轉換</li>
+<li>支援 全形/半形 轉換 (完整字元範圍)</li>
 </ul>
 <h2>Link</h2>
 <ul>

@@ -1,6 +1,6 @@
 {
   "name": "idea-cjk-conv",
-  "version": "2018.8.12.0",
+  "version": "2018.8.13.0",
   "private": true,
   "description": "idea-cjk-conv 中文漢字 轉換 `新字体`／`繁體`／`简体`\nconvert `chinese`／`hanzi` between `Shinjitai`／`Traditional`／`Simplified`",
   "homepage": "https://github.com/bluelovers/idea-cjk-conv",
@@ -18,9 +18,7 @@
     "dependencies": [
       "com.intellij.modules.lang"
     ],
-    "optionalDependencies": [
-
-    ]
+    "optionalDependencies": []
   },
   "main": "index.js",
   "bin": {
