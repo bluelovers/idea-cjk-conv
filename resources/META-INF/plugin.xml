@@ -1,11 +1,11 @@
 <idea-plugin url="https://github.com/bluelovers/idea-cjk-conv/">
   <id>sc.plugin.cjkconv</id>
   <name>cjk-conv</name>
-  <version>2018.8.13.0</version>
+  <version>2018.8.23.0</version>
   <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv/">bluelovers</vendor>
 
   <description><![CDATA[<h1>idea-cjk-conv README</h1>
-<p>idea-cjk-conv 中文漢字 轉換 <code>新字体</code>／<code>繁體</code>／<code>简体</code><br>convert <code>chinese</code>／<code>hanzi</code> between <code>Shinjitai</code>／<code>Traditional</code>／<code>Simplified</code></p>
+<p>convert <code>chinese</code>／<code>hanzi</code> between <code>Shinjitai</code>／<code>Traditional</code>／<code>Simplified</code><br>idea-cjk-conv 中文漢字 轉換 <code>新字体</code>／<code>繁體</code>／<code>简体</code></p>
 <h2>install</h2>
 <p><a href="https://github.com/bluelovers/idea-cjk-conv">https://github.com/bluelovers/idea-cjk-conv</a></p>
 <ul>
@@ -14,13 +14,30 @@
 </ul>
 <h2>Feature</h2>
 <blockquote>
+<p>Feature already in this plugin</p>
+</blockquote>
+<ul>
+<li>convert Traditional / Simplified (safe / unsafe mode)</li>
+<li>convert full-width / half-width (need add more char support)</li>
+</ul>
+<blockquote>
 <p>已實現功能</p>
 </blockquote>
 <ul>
-<li>簡繁互轉 (分為 安全模式 與 危險模式) / convert Traditional / Simplified (safe / unsafe mode)</li>
-<li>全形 半形 轉換 (尚未完整支援所有這類字元) / convert full-width / half-width (need add more char support)</li>
+<li>簡繁互轉 (分為 安全模式 與 危險模式)</li>
+<li>全形 半形 轉換 (尚未完整支援所有這類字元)</li>
 </ul>
 <h2>Roadmap</h2>
+<blockquote>
+<p>but need help make it</p>
+</blockquote>
+<ul>
+<li>support Shinjitai</li>
+<li>support menu on search input field</li>
+<li>fork feature from <a href="https://github.com/bluelovers/cjk-convert">cjk-conv</a></li>
+<li>fork feature from <a href="https://github.com/bluelovers/regexp-cjk">regexp-cjk</a></li>
+<li>fully support convert full-width / half-width (full range)</li>
+</ul>
 <blockquote>
 <p>以下功能 礙於 本人惰性與實際上不懂 kotlin / java 所以距離實現可能遙遙無期</p>
 </blockquote>
@@ -38,7 +55,7 @@
 <li><a href="https://github.com/bluelovers/idea-run-typescript">Run Configuration for TypeScript</a></li>
 <li></li>
 </ul>
-<h3>插件製作時複製參考來源</h3>
+<h3>this plugin copy some code from</h3>
 <ul>
 <li><a href="https://github.com/YiiGuxing/TranslationPlugin">https://github.com/YiiGuxing/TranslationPlugin</a></li>
 <li><a href="https://github.com/krasa/StringManipulation">https://github.com/krasa/StringManipulation</a></li>
