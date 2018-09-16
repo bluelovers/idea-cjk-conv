@@ -1,6 +1,6 @@
 {
   "name": "idea-cjk-conv",
-  "version": "2018.8.31.0",
+  "version": "2018.9.16.0",
   "private": true,
   "description": "idea-cjk-conv 中文漢字 轉換 `新字体`／`繁體`／`简体`\nconvert `chinese`／`hanzi` between `Shinjitai`／`Traditional`／`Simplified`",
   "homepage": "https://github.com/bluelovers/idea-cjk-conv/",
@@ -38,19 +38,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@types/bluebird": "^3.5.23",
-    "@types/cheerio": "^0.22.8",
+    "@types/bluebird": "^3.5.24",
+    "@types/cheerio": "^0.22.9",
     "@types/cross-spawn": "^6.0.0",
     "@types/fs-extra": "^5.0.4",
-    "@types/marked": "^0.4.0",
-    "@types/node": "^10.5.7",
-    "bluebird": "^3.5.1",
+    "@types/marked": "^0.4.1",
+    "@types/node": "^10.9.4",
+    "bluebird": "^3.5.2",
     "cheerio": "^1.0.0-rc.2",
-    "cjk-conv": "^1.0.77",
+    "cjk-conv": "^1.0.101",
     "cross-spawn": "^6.0.5",
     "fast-glob": "^2.2.2",
     "fs-extra": "^7.0.0",
-    "marked": "^0.4.0",
+    "marked": "^0.5.0",
     "moment": "^2.22.2"
   },
   "devDependencies": {}

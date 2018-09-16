@@ -1,7 +1,7 @@
 <idea-plugin url="https://github.com/bluelovers/idea-cjk-conv/">
   <id>sc.plugin.cjkconv</id>
   <name>cjk-conv</name>
-  <version>2018.8.31.0</version>
+  <version>2018.9.16.0</version>
   <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-cjk-conv/">bluelovers</vendor>
 
   <description><![CDATA[<h1>idea-cjk-conv README</h1>

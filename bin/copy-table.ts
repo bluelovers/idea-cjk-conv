@@ -8,6 +8,7 @@ import { PKG, PKG_NAME, PKG_NAME_ID } from '../lib/util';
 import { PROJECT_PRODUCTION, PROJECT_RESOURCES } from '../project.config';
 import fg = require('fast-glob');
 import Promise = require('bluebird');
+import CjkConv = require('cjk-conv');
 
 const MOD = 'cjk-conv';
 
@@ -24,7 +25,7 @@ Promise
 	], options))
 	.tap(function ()
 	{
-		console.log('start copy all table');
+		console.log('start copy all table', CjkConv.version);
 		console.log(path.relative(__dirname, RESOURCES_PATH));
 	})
 	.each(function (filename: string)
