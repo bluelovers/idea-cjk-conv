@@ -88,7 +88,7 @@ gen### temp template
 !/.idea/idea-cjk-conv.iml
 !/.idea/modules.xml
 !/.gitmodules
-/out/
 !/.idea/dictionaries/*
 !/.idea/dictionaries/
 !/.idea/
+!/out/
