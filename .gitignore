@@ -92,3 +92,4 @@ gen### temp template
 !/.idea/dictionaries/
 !/.idea/
 !/out/
+/node_modules/
