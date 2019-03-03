@@ -20,7 +20,7 @@ fs.readJSON(file)
 	})
 	.then(function (PKG)
 	{
-		let n: string | number = PKG.version.replace(key + '.', '');
+		let n: string | number = PKG.ideaPlugin.version.replace(key + '.', '');
 
 		if (/^(\d+)$/.test(n))
 		{
@@ -31,12 +31,14 @@ fs.readJSON(file)
 			n = 0;
 		}
 
-		let old = PKG.version;
+		let old = PKG.ideaPlugin.version;
 
-		PKG.version = [
+		PKG.ideaPlugin.version = [
 			key,
 			n,
 		].join('.');
+
+		PKG.version = key;
 
 		return {
 			PKG,
@@ -53,7 +55,7 @@ fs.readJSON(file)
 			})
 			.then(function ()
 			{
-				console.log(`update version from ${old} to ${PKG.version}`);
+				console.log(`update version from ${old} to ${PKG.ideaPlugin.version}`);
 			})
 		;
 	})

@@ -32,7 +32,7 @@ Promise.resolve(fs.readFile(PROJECT_META_INF_INFO))
 		$('idea-plugin > id').text(PROJECT_IDEA + '.' + PKG_NAME_ID);
 		// @ts-ignore
 		$('idea-plugin > name').text(PKG.ideaPlugin.title || PKG.title || PKG_NAME);
-		$('idea-plugin > version').text(PKG.version);
+		$('idea-plugin > version').text(PKG.ideaPlugin.version);
 		let vendor = $('idea-plugin > vendor');
 
 		vendor.attr('url', PKG.homepage);
