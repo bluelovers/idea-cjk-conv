@@ -20,7 +20,7 @@ const options = {
 };
 
 Promise
-	.resolve(fg<string>([
+	.resolve(fg([
 		'**/*.txt',
 	], options))
 	.tap(function ()

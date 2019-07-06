@@ -1,6 +1,6 @@
 {
   "name": "idea-cjk-conv",
-  "version": "2019.4.4",
+  "version": "2019.7.6",
   "private": true,
   "description": "idea-cjk-conv 中文漢字 轉換 `新字体`／`繁體`／`简体`\nconvert `chinese`／`hanzi` between `Shinjitai`／`Traditional`／`Simplified`",
   "homepage": "https://github.com/bluelovers/idea-cjk-conv/",
@@ -15,7 +15,7 @@
   "author": "bluelovers",
   "ideaPlugin": {
     "title": "cjk-conv",
-    "version": "2019.4.4.0",
+    "version": "2019.7.6.0",
     "baseUrl": "https://github.com/bluelovers/idea-cjk-conv/",
     "dependencies": [
       "com.intellij.modules.lang"
@@ -31,29 +31,29 @@
   },
   "scripts": {
     "update-version": "ts-node ./bin/update-version.ts && npm run update-info",
-    "pre-build": "npm run copy-table && npm run update-info",
-    "pack": "npm run pre-build && npm run pack-jar",
-    "new-version-pack": "npm run update-version & npm run pack",
+    "pre-build": "yarn run copy-table && npm run update-info",
+    "pack": "yarn run pre-build && npm run pack-jar",
+    "new-version-pack": "yarn run update-version & npm run pack",
     "pack-jar": "ts-node ./bin/pack-jar.ts",
     "copy-table": "ts-node ./bin/copy-table.ts",
     "update-info": "ts-node ./bin/update-info.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@types/bluebird": "^3.5.24",
-    "@types/cheerio": "^0.22.9",
+    "@types/bluebird": "^3.5.27",
+    "@types/cheerio": "^0.22.12",
     "@types/cross-spawn": "^6.0.0",
-    "@types/fs-extra": "^5.0.4",
-    "@types/marked": "^0.4.1",
-    "@types/node": "^10.9.4",
-    "bluebird": "^3.5.2",
+    "@types/fs-extra": "^8.0.0",
+    "@types/marked": "^0.6.5",
+    "@types/node": "^12.0.12",
+    "bluebird": "^3.5.5",
     "cheerio": "^1.0.0-rc.2",
-    "cjk-conv": "^1.0.101",
+    "cjk-conv": "^1.1.74",
     "cross-spawn": "^6.0.5",
-    "fast-glob": "^2.2.2",
-    "fs-extra": "^7.0.0",
-    "marked": "^0.5.0",
-    "moment": "^2.22.2"
+    "fast-glob": "^3.0.4",
+    "fs-extra": "^8.1.0",
+    "marked": "^0.7.0",
+    "moment": "^2.24.0"
   },
   "devDependencies": {}
 }
